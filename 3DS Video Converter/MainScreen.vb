@@ -1,4 +1,4 @@
-﻿Public Class Form1
+﻿Public Class MainScreen
     Private Sub ResultLabel_Click(sender As Object, e As EventArgs) Handles ResultLabel.Click
 
     End Sub
