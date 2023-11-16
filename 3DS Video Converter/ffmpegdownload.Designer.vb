@@ -78,7 +78,8 @@ Partial Class ffmpegdownload
         Controls.Add(FFmpegnotfoundLabel)
         Controls.Add(DownloadYesButton)
         Name = "ffmpegdownload"
-        Text = "Form2"
+        Text = "FFmpeg nicht vorhanden"
+        TopMost = True
         ResumeLayout(False)
         PerformLayout()
     End Sub
