@@ -11,7 +11,7 @@
 Option Strict On
 Option Explicit On
 
-
+'
 Namespace My
 
     'HINWEIS: Diese Datei wird automatisch generiert und darf nicht direkt bearbeitet werden.  Wenn Sie Änderungen vornehmen möchten

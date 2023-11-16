@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _ '
 Partial Class ffmpegdownload
     Inherits System.Windows.Forms.Form
 
     'Das Formular überschreibt den Löschvorgang, um die Komponentenliste zu bereinigen.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,9 +20,9 @@ Partial Class ffmpegdownload
     'Hinweis: Die folgende Prozedur ist für den Windows Form-Designer erforderlich.
     'Das Bearbeiten ist mit dem Windows Form-Designer möglich.  
     'Das Bearbeiten mit dem Code-Editor ist nicht möglich.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ffmpegdownload))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FFmpegdownload))
         DownloadYesButton = New Button()
         FFmpegnotfoundLabel = New Label()
         DownloadNoButton = New Button()
@@ -41,7 +41,7 @@ Partial Class ffmpegdownload
         ' FFmpegnotfoundLabel
         ' 
         FFmpegnotfoundLabel.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        FFmpegnotfoundLabel.Font = New Font("Segoe UI", 10F)
+        FFmpegnotfoundLabel.Font = New Font("Segoe UI", 10.0F)
         FFmpegnotfoundLabel.Location = New Point(12, 9)
         FFmpegnotfoundLabel.Name = "FFmpegnotfoundLabel"
         FFmpegnotfoundLabel.Size = New Size(334, 124)
@@ -70,7 +70,7 @@ Partial Class ffmpegdownload
         ' 
         ' ffmpegdownload
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(358, 192)
         Controls.Add(ffmpegmanualdownload)
