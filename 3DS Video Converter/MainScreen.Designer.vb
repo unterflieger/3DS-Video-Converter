@@ -22,12 +22,12 @@ Partial Class MainScreen
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        TextBox1 = New TextBox()
+        SourceTextBox = New TextBox()
         FileSearchButton = New Button()
         TitleText = New Label()
         SourceLabel = New Label()
-        TextBox2 = New TextBox()
-        Button1 = New Button()
+        ResultTextBox = New TextBox()
+        ResultSearchButton = New Button()
         ResultLabel = New Label()
         ConvertButton = New Button()
         LeftVideoSelect = New RadioButton()
@@ -37,15 +37,17 @@ Partial Class MainScreen
         GithubLink = New LinkLabel()
         Label2 = New Label()
         Label1 = New Label()
+        OpenFileDialog1 = New OpenFileDialog()
+        SaveFileDialog1 = New SaveFileDialog()
         SuspendLayout()
         ' 
-        ' TextBox1
+        ' SourceTextBox
         ' 
-        TextBox1.Location = New Point(12, 72)
-        TextBox1.Name = "TextBox1"
-        TextBox1.PlaceholderText = "Dateispeicherort (Beispiel: C:\Videos\video.mp4)"
-        TextBox1.Size = New Size(298, 23)
-        TextBox1.TabIndex = 0
+        SourceTextBox.Location = New Point(12, 72)
+        SourceTextBox.Name = "SourceTextBox"
+        SourceTextBox.PlaceholderText = "Dateispeicherort (Beispiel: C:\Videos\video.mp4)"
+        SourceTextBox.Size = New Size(298, 23)
+        SourceTextBox.TabIndex = 0
         ' 
         ' FileSearchButton
         ' 
@@ -75,31 +77,31 @@ Partial Class MainScreen
         SourceLabel.TabIndex = 3
         SourceLabel.Text = "Originalvideo:"
         ' 
-        ' TextBox2
+        ' ResultTextBox
         ' 
-        TextBox2.Location = New Point(12, 129)
-        TextBox2.Name = "TextBox2"
-        TextBox2.PlaceholderText = "Dateispeicherort (Beispiel: C:\Videos\video-fertig.mp4)"
-        TextBox2.Size = New Size(298, 23)
-        TextBox2.TabIndex = 4
+        ResultTextBox.Location = New Point(12, 129)
+        ResultTextBox.Name = "ResultTextBox"
+        ResultTextBox.PlaceholderText = "Dateispeicherort (Beispiel: C:\Videos\video-fertig.mp4)"
+        ResultTextBox.Size = New Size(298, 23)
+        ResultTextBox.TabIndex = 4
         ' 
-        ' Button1
+        ' ResultSearchButton
         ' 
-        Button1.Location = New Point(316, 129)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(75, 23)
-        Button1.TabIndex = 5
-        Button1.Text = "Suchen..."
-        Button1.UseVisualStyleBackColor = True
+        ResultSearchButton.Location = New Point(316, 129)
+        ResultSearchButton.Name = "ResultSearchButton"
+        ResultSearchButton.Size = New Size(75, 23)
+        ResultSearchButton.TabIndex = 5
+        ResultSearchButton.Text = "Suchen..."
+        ResultSearchButton.UseVisualStyleBackColor = True
         ' 
         ' ResultLabel
         ' 
         ResultLabel.AutoSize = True
         ResultLabel.Location = New Point(12, 111)
         ResultLabel.Name = "ResultLabel"
-        ResultLabel.Size = New Size(84, 15)
+        ResultLabel.Size = New Size(105, 15)
         ResultLabel.TabIndex = 6
-        ResultLabel.Text = "Fertiges Video:"
+        ResultLabel.Text = "Fertige(s) Video(s):"
         ' 
         ' ConvertButton
         ' 
@@ -180,6 +182,19 @@ Partial Class MainScreen
         Label1.TabIndex = 14
         Label1.Text = "(Bei ""Beide"" entstehen 2 Videos)"
         ' 
+        ' OpenFileDialog1
+        ' 
+        OpenFileDialog1.DefaultExt = "mp4"
+        OpenFileDialog1.Filter = "Videodateien (*.mp4)|*.mp4|Alle Dateien (*.*)|*.*"
+        ' 
+        ' SaveFileDialog1
+        ' 
+        SaveFileDialog1.DefaultExt = "mp4"
+        SaveFileDialog1.FileName = "FertigesVideo.mp4"
+        SaveFileDialog1.Filter = "Videodateien (*.mp4)|*.mp4|Alle Dateien (*.*)|*.*"
+        SaveFileDialog1.Tag = ".mp4"
+        SaveFileDialog1.Title = "Zielverzeichnis und Namen wählen"
+        ' 
         ' MainScreen
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -195,24 +210,24 @@ Partial Class MainScreen
         Controls.Add(LeftVideoSelect)
         Controls.Add(ConvertButton)
         Controls.Add(ResultLabel)
-        Controls.Add(Button1)
-        Controls.Add(TextBox2)
+        Controls.Add(ResultSearchButton)
+        Controls.Add(ResultTextBox)
         Controls.Add(SourceLabel)
         Controls.Add(TitleText)
         Controls.Add(FileSearchButton)
-        Controls.Add(TextBox1)
+        Controls.Add(SourceTextBox)
         Name = "MainScreen"
         Text = "3DS Video Converter"
         ResumeLayout(False)
         PerformLayout()
     End Sub
 
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents SourceTextBox As TextBox
     Friend WithEvents FileSearchButton As Button
     Friend WithEvents TitleText As Label
     Friend WithEvents SourceLabel As Label
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents ResultTextBox As TextBox
+    Friend WithEvents ResultSearchButton As Button
     Friend WithEvents ResultLabel As Label
     Friend WithEvents ConvertButton As Button
     Friend WithEvents LeftVideoSelect As RadioButton
@@ -222,5 +237,7 @@ Partial Class MainScreen
     Friend WithEvents GithubLink As LinkLabel
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
+    Friend WithEvents OpenFileDialog1 As OpenFileDialog
+    Friend WithEvents SaveFileDialog1 As SaveFileDialog
 
 End Class

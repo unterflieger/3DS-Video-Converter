@@ -1,8 +1,8 @@
 ﻿Imports System.Formats
 
-Public Class ffmpegdownload
-    Private Sub ffmpegmanualdownload_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles ffmpegmanualdownload.LinkClicked
-        Dim webAddress As String = "https://www.ffmpeg.org/"
+Public Class FFmpegdownload
+    Private Sub FFmpegmanualdownload_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles ffmpegmanualdownload.LinkClicked
+        'Dim webAddress As String = "https://www.ffmpeg.org/"
         Process.Start("CMD", "/C start https://www.ffmpeg.org/")
         Me.Hide()
     End Sub
