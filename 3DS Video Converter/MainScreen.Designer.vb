@@ -45,7 +45,7 @@ Partial Class MainScreen
         ' 
         SourceTextBox.Location = New Point(12, 72)
         SourceTextBox.Name = "SourceTextBox"
-        SourceTextBox.PlaceholderText = "Dateispeicherort (Beispiel: C:\Videos\video.mp4)"
+        SourceTextBox.PlaceholderText = "Dateispeicherort (Beispiel: C:\Videos\video.avi)"
         SourceTextBox.Size = New Size(298, 23)
         SourceTextBox.TabIndex = 0
         ' 
@@ -81,7 +81,7 @@ Partial Class MainScreen
         ' 
         ResultTextBox.Location = New Point(12, 129)
         ResultTextBox.Name = "ResultTextBox"
-        ResultTextBox.PlaceholderText = "Dateispeicherort (Beispiel: C:\Videos\video-fertig.mp4)"
+        ResultTextBox.PlaceholderText = "Dateispeicherort (Beispiel: C:\Videos\video-fertig.avi)"
         ResultTextBox.Size = New Size(298, 23)
         ResultTextBox.TabIndex = 4
         ' 
@@ -184,15 +184,15 @@ Partial Class MainScreen
         ' 
         ' OpenFileDialog1
         ' 
-        OpenFileDialog1.DefaultExt = "mp4"
-        OpenFileDialog1.Filter = "Videodateien (*.mp4)|*.mp4|Alle Dateien (*.*)|*.*"
+        OpenFileDialog1.DefaultExt = "avi"
+        OpenFileDialog1.Filter = "Videodateien (*.avi)|*.avi|Alle Dateien (*.*)|*.*"
         ' 
         ' SaveFileDialog1
         ' 
-        SaveFileDialog1.DefaultExt = "mp4"
-        SaveFileDialog1.FileName = "FertigesVideo.mp4"
-        SaveFileDialog1.Filter = "Videodateien (*.mp4)|*.mp4|Alle Dateien (*.*)|*.*"
-        SaveFileDialog1.Tag = ".mp4"
+        SaveFileDialog1.DefaultExt = "avi"
+        SaveFileDialog1.FileName = "FertigesVideo.avi"
+        SaveFileDialog1.Filter = "Videodatei (*.avi)|*.avi|Alle Dateien (*.*)|*.*"
+        SaveFileDialog1.Tag = ".avi"
         SaveFileDialog1.Title = "Zielverzeichnis und Namen wählen"
         ' 
         ' MainScreen

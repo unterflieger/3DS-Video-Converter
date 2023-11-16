@@ -33,4 +33,16 @@
     Private Sub GithubLink_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles GithubLink.LinkClicked
         Process.Start("CMD", "/C start https://github.com/unterflieger")
     End Sub
+
+    Private Sub ConvertButton_Click(sender As Object, e As EventArgs) Handles ConvertButton.Click
+        Dim command As String
+
+        If VideoTrackType Is "Left" Then
+            command = "/K ""%cd%""\ffmpeg-master-latest-win64-gpl\bin\ffmpeg.exe -i """ & SourceTextBox.Text & """ -map 0:0 -map 0:1 -vcodec copy -acodec copy ""left" & ResultTextBox.Text & """"
+        End If
+        If VideoTrackType Is "Right" Then
+            command = "/K ""%cd%""\ffmpeg-master-latest-win64-gpl\bin\ffmpeg.exe -i """ & SourceTextBox.Text & """ -map 0:2 -vcodec copy -acodec copy -an ""right" & SourceTextBox.Text & """"
+        End If
+        Process.Start("CMD", command)
+    End Sub
 End Class
