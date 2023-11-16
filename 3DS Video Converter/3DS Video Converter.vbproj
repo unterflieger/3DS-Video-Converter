@@ -4,7 +4,7 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net8.0-windows</TargetFramework>
     <RootNamespace>_3DS_Video_Converter</RootNamespace>
-    <StartupObject>Sub Main</StartupObject>
+    <StartupObject>_3DS_Video_Converter.My.MyApplication</StartupObject>
     <UseWindowsForms>true</UseWindowsForms>
     <MyType>WindowsForms</MyType>
   </PropertyGroup>

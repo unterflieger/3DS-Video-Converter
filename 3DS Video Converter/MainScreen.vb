@@ -1,9 +1,6 @@
 ﻿Public Class MainScreen
-    Private Sub ResultLabel_Click(sender As Object, e As EventArgs) Handles ResultLabel.Click
-
-    End Sub
-
-    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
-
+    Private Sub LeftVideoSelect_CheckedChanged(sender As Object, e As EventArgs) Handles LeftVideoSelect.CheckedChanged
+        RightVideoSelect.Checked = False
+        BothVideoSelect.Checked = False
     End Sub
 End Class

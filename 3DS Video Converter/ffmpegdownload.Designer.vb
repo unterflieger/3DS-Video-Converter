@@ -26,6 +26,7 @@ Partial Class ffmpegdownload
         DownloadYesButton = New Button()
         FFmpegnotfoundLabel = New Label()
         DownloadNoButton = New Button()
+        ffmpegmanualdownload = New LinkLabel()
         SuspendLayout()
         ' 
         ' DownloadYesButton
@@ -43,7 +44,7 @@ Partial Class ffmpegdownload
         FFmpegnotfoundLabel.Font = New Font("Segoe UI", 10F)
         FFmpegnotfoundLabel.Location = New Point(12, 9)
         FFmpegnotfoundLabel.Name = "FFmpegnotfoundLabel"
-        FFmpegnotfoundLabel.Size = New Size(334, 139)
+        FFmpegnotfoundLabel.Size = New Size(334, 124)
         FFmpegnotfoundLabel.TabIndex = 1
         FFmpegnotfoundLabel.Text = resources.GetString("FFmpegnotfoundLabel.Text")
         FFmpegnotfoundLabel.TextAlign = ContentAlignment.MiddleCenter
@@ -57,20 +58,33 @@ Partial Class ffmpegdownload
         DownloadNoButton.Text = "Nein"
         DownloadNoButton.UseVisualStyleBackColor = True
         ' 
-        ' Form2
+        ' ffmpegmanualdownload
+        ' 
+        ffmpegmanualdownload.AutoSize = True
+        ffmpegmanualdownload.Location = New Point(93, 133)
+        ffmpegmanualdownload.Name = "ffmpegmanualdownload"
+        ffmpegmanualdownload.Size = New Size(173, 15)
+        ffmpegmanualdownload.TabIndex = 3
+        ffmpegmanualdownload.TabStop = True
+        ffmpegmanualdownload.Text = "Manuell FFmpeg herunterladen"
+        ' 
+        ' ffmpegdownload
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(358, 192)
+        Controls.Add(ffmpegmanualdownload)
         Controls.Add(DownloadNoButton)
         Controls.Add(FFmpegnotfoundLabel)
         Controls.Add(DownloadYesButton)
-        Name = "Form2"
+        Name = "ffmpegdownload"
         Text = "Form2"
         ResumeLayout(False)
+        PerformLayout()
     End Sub
 
     Friend WithEvents DownloadYesButton As Button
     Friend WithEvents FFmpegnotfoundLabel As Label
     Friend WithEvents DownloadNoButton As Button
+    Friend WithEvents ffmpegmanualdownload As LinkLabel
 End Class

@@ -180,10 +180,11 @@ Partial Class MainScreen
         Label1.TabIndex = 14
         Label1.Text = "(Bei ""Beide"" entstehen 2 Videos)"
         ' 
-        ' Form1
+        ' MainScreen
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
+        AutoValidate = AutoValidate.EnableAllowFocusChange
         ClientSize = New Size(403, 281)
         Controls.Add(Label1)
         Controls.Add(Label2)
@@ -200,7 +201,7 @@ Partial Class MainScreen
         Controls.Add(TitleText)
         Controls.Add(FileSearchButton)
         Controls.Add(TextBox1)
-        Name = "Form1"
+        Name = "MainScreen"
         Text = "3DS Video Converter"
         ResumeLayout(False)
         PerformLayout()
